@@ -24,7 +24,7 @@
 		 var wins = 0;
 		 var losses = 0;
 		 var numGuesses = 9;
-		 var guessChoices = [];
+		 var userGuesses = [];
 
 		 document.onkeyup = function(event) {
 
@@ -40,19 +40,19 @@
 				if (userGuess === computerGuess) {
 					wins++;
 					numGuesses = 9;
-					guessChoices = [];
+					userGuesses = [];
 				}
 
 				if (userGuess != computerGuess) {
 					numGuesses --;
-					guessChoices.push(userGuess);
+					userGuesses.push(userGuess);
 				}
 
 				if (numGuesses === 0) {
 
 				numGuesses = 9;
 				losses ++;
-				guessChoices = [];
+				userGuesses = [];
 
 				
 			}
@@ -63,7 +63,7 @@
 			"<p>Wins: " + wins + "</p>" +
 			"<p>Losses: " + losses + "</p>" +
 			"<p>Guesses Left: " + numGuesses + "</p>" +
-			"<p>Your Guesses so far: " + guessChoices.join(", ") + "</p>";
+			"<p>Your Guesses so far: " + userGuesses.join(", ") + "</p>";
 
 			document.querySelector("#game").innerHTML = html;
 
