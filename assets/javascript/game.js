@@ -49,4 +49,3 @@
 			
 			}
 		};
-		<script src="/javascript/game.js"></script>
