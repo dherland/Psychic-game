@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Psychic Game</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+		var wins = 0;
+		var losses = 0;
+
+		var computerGuess = letters[Math.floor(Math.random()*letters.length)];
+
+		console.log(computerGuess);
+
+		var guesscount = 0;
+
+		console.log(guesscount);
+
+
+		var userguess = '';
+
+
+		document.onkeyup = function() {
+
+			var userguess = String.fromCharCode(event.keyCode).toLowerCase();
+			// var guess = userguess.toLowerCase();
+			console.log(userguess);
+
+			if (userguess==computerGuess) {
+
+			alert("you win");
+			wins++
+
+			} else {
+
+				guesscount++;
+
+			}
+
+		}
+
+		console.log("userguess " + userguess + " computerguess " + computerGuess);
+
+
+	</script>
+
+</body>
+</html>
